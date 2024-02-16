@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:src="@drawable/university"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/UniversityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="5dp"
+        android:text="University Name"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/UniversityName"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/UniversityDomain"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="5dp"
+            android:text="Domain"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/UniversityCountry"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/UniversityCountry"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="5dp"
+            android:text="Country"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/UniversityDomain"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
